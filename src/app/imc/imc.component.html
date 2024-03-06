@@ -1,8 +1,31 @@
 <form>
-    <input type="number" [(ngModel)]="weight" name="weight">
-    <input type="number" [(ngModel)]="height" name="weight">
-    <button (click)="bmiOp()">Calcular</button>
-    {{bmi.toFixed(2)}}
-    {{class}}
-    <img src={{img}}>
+    <div class="bg-light rounded-5 p-5 m-5 ">
+      <h1 class="text-center mb-5">Cálculo de IMC</h1>
+      <div class="row">
+        <div class="col-6">
+          <div class="row">
+            <div class="col-6">
+              <label class="form-label ">Insira seu peso (Em Kg)</label>
+              <input type="number" [(ngModel)]="weight" name="weight">
+            </div>
+            <div class="col-6">
+              <label class="form-label ">Insira sua altura (Em metros)</label>
+              <input type="number" [(ngModel)]="height" name="weight">
+            </div>
+          </div>
+          <div class="col-4 mx-auto">
+            <button type="button" class="btn btn-success" (click)="bmiOp()">Calcular</button>
+          </div>
+        </div>
+        <div class="col-6 ">
+          <div class="row">
+            <img class="col-6 mx-auto w-25" src={{img}}>
+          </div>
+          <div class="row text-center">
+            <p>{{bmi.toFixed(2)}}</p>
+            <p>{{class}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
 </form>
