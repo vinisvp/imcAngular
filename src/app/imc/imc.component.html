@@ -1,29 +1,33 @@
 <form>
-    <div class="bg-light rounded-5 p-5 m-5 ">
+    <div class="bg-light rounded-5 p-5 m-3 ">
       <h1 class="text-center mb-5">Cálculo de IMC</h1>
       <div class="row">
-        <div class="col-6">
+        <div class="col-sm-6 mt-5">
           <div class="row">
             <div class="col-6">
               <label class="form-label ">Insira seu peso (Em Kg)</label>
-              <input type="number" [(ngModel)]="weight" name="weight">
+              <input type="number" class="form-control" [(ngModel)]="weight" name="weight">
             </div>
             <div class="col-6">
               <label class="form-label ">Insira sua altura (Em metros)</label>
-              <input type="number" [(ngModel)]="height" name="weight">
+              <input type="number" class="form-control" [(ngModel)]="height" name="height">
             </div>
           </div>
-          <div class="col-4 mx-auto">
+          <div class="col d-flex justify-content-center mt-5">
             <button type="button" class="btn btn-success" (click)="bmiOp()">Calcular</button>
           </div>
         </div>
-        <div class="col-6 ">
+        <div class="col-sm-6">
           <div class="row">
-            <img class="col-6 mx-auto w-25" src={{img}}>
+            <div class="col d-flex justify-content-center">
+              <img style="width: 50px;" src={{img}}>
+            </div>
           </div>
           <div class="row text-center">
-            <p>{{bmi.toFixed(2)}}</p>
-            <p>{{class}}</p>
+            <div class="col-sm-4 alert alert-primary mx-auto mh-75" style="height: 125px;" role="alert">
+              <p>IMC: {{bmi.toFixed(2)}}</p>
+              <p>{{class}}</p>
+            </div>
           </div>
         </div>
       </div>

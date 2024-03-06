@@ -9,15 +9,15 @@ export class ImcComponent {
   weight: number = 0;
   height: number = 0;
   bmi: number = 0;
-  img: string = '';
-  class: string = '';
+  img: string = '../assets/img/imcNull.png';
+  class: string = 'Insira os dados nos campos';
 
   bmiOp(){
     if (this.height == 0)
     {
       this.bmi = 0;
       this.class = 'Insira uma altura acima de 0';
-      this.img = '';
+      this.img = '../assets/img/imcNull.png';
     }
     else
     {
